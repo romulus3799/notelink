@@ -6,11 +6,11 @@ angular.module('appRoutes', [])
 				templateUrl: 'home.html',
 				controllerAs: 'HomeController'
 			})
-			.when('/post', {
+			.when('/share', {
 				templateUrl: 'post.html',
 				controllerAs: 'PostController'
 			})
-			.when('/channels', {
+			.when('/discover', {
 				templateUrl: 'channels.html',
 				controllerAs: 'ChannelsController'
 			})

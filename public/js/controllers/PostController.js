@@ -1,7 +1,7 @@
 (() => {
 	'use strict';
 	angular.module('PostController', [])
-		.controller('PostController', ($scope, $http, $location, SongService) => {
+		.controller('PostController', ($scope, $http, SongService) => {
 
 			SongService.get().then(tracks => {
 				$scope.tracks = tracks.data;
@@ -25,11 +25,11 @@
 			$scope.submitted = false;
 			$scope.submissionMessage = '';
 			$scope.postTrack = () => {
+				console.log($scope.track);
 				$scope.submitted = true;
 				$scope.track.upload_date = Date.now();
-				
 				if ($scope.track.tags instanceof String)
-					$scope.track.tags = $scope.track.tags.split(" ") || [];
+					$scope.track.tags = $scope.track.tags.toLowerCase().split(" ") || [];
 				
 				SongService.post($scope.track)
 					.then(tracks => {
@@ -40,8 +40,6 @@
 						$scope.submissionMessage = 'There was an error sharing your track.';
 						console.log(error); 
 					});
-
-				//$location.path('/');
 			}
 
 		});

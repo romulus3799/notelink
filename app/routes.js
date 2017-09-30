@@ -18,7 +18,7 @@ module.exports = app => {
 			album		: req.body.album,
 			name		: req.body.name,
 			explicit	: req.body.explicit,
-			genre		: req.body.genre,
+			genres		: req.body.genres,
 			likes		: req.body.likes,
 			dislikes	: req.body.dislikes,
 			tags		: req.body.tags,
