@@ -10,7 +10,8 @@
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="libs/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<!-- SPELLS -->
 	<script src="libs/angular/angular.js"></script>
 	<script src="libs/angular-material/angular-material.min.js"></script>
@@ -20,6 +21,7 @@
 	<script src="libs/angular-route/angular-route.min.js"></script>
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	
+	<script src="js/data/genres.js"></script>
 	<script src="js/controllers/MainController.js"></script>
 	<script src="js/controllers/HomeController.js"></script>
 	<script src="js/controllers/PostController.js"></script>
@@ -34,16 +36,16 @@
 	<md-content class="md-padding">
 	 	<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
 			<md-nav-item md-nav-href="/" name="home">
-				Home
+				<span class="material-icons">&#xE88A;</span> Home
 			</md-nav-item>
 			<md-nav-item md-nav-href="/post" name="post">
-				Post
+				 <span class="material-icons">&#xE147;</span> Share
 			</md-nav-item>
 			<md-nav-item md-nav-href="/channels" name="channels">
-				Channels
+				<span class="material-icons">&#xE030;</span> Share
 			</md-nav-item>
 			<md-nav-item md-nav-href="/profile" name="profile">
-				Profile
+				<span class="material-icons">&#xE853;</span> Profile
 			</md-nav-item>
 		</md-nav-bar>
 		<div ng-view></div>

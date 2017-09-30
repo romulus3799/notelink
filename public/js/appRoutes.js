@@ -18,6 +18,10 @@ angular.module('appRoutes', [])
 				templateUrl: 'profile.html',
 				controllerAs: 'ProfileController'
 			})
+			.when('/api/songs', {
+				templateUrl: '',
+				controllerAs: ''
+			})
 
 		$locationProvider.html5Mode(true);
 	}]);

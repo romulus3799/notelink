@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = mongoose.model('Song', {
+	link : {type: String, default: ''},
 	artist : {type: String, default: ''},
 	album : {type: String, default: ''},
 	name : {type: String, default: ''},
@@ -9,5 +10,5 @@ module.exports = mongoose.model('Song', {
 	tags : {type: Array, default: []},
 	likes : {type: Number, default: 0},
 	dislikes : {type: Number, default: 0},
-	upload_date: {type: Date, default: Date.now()}
+	upload_date: {type: Number, default: Date.now()}
 })
