@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<base href="/">
+	<title>Note Link</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="libs/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- SPELLS -->
+	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular-material/angular-material.min.js"></script>
+	<script src="libs/angular-animate/angular-animate.min.js"></script>
+	<script src="libs/angular-aria/angular-aria.min.js"></script>
+	<script src="libs/angular-messages/angular-messages.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	
+	<script src="js/controllers/MainController.js"></script>
+	<script src="js/controllers/HomeController.js"></script>
+	<script src="js/controllers/PostController.js"></script>
+	<script src="js/controllers/ChannelsController.js"></script>
+	<script src="js/controllers/ProfileController.js"></script>
+	<script src="js/services/SongService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+
+</head>
+<body ng-app="noteLink" ng-controller="MainController" ng-cloak>
+	<md-content class="md-padding">
+	 	<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
+			<md-nav-item md-nav-href="/" name="home">
+				Home
+			</md-nav-item>
+			<md-nav-item md-nav-href="/post" name="post">
+				Post
+			</md-nav-item>
+			<md-nav-item md-nav-href="/channels" name="channels">
+				Channels
+			</md-nav-item>
+			<md-nav-item md-nav-href="/profile" name="profile">
+				Profile
+			</md-nav-item>
+		</md-nav-bar>
+		<div ng-view></div>
+	</md-content>
+</body>
+</html>

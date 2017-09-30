@@ -1,0 +1,248 @@
+[debug] [2017-09-30T04:59:41.817Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T04:59:41.819Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T04:59:41.820Z] CLI Version:   3.12.0
+[debug] [2017-09-30T04:59:41.820Z] Platform:      win32
+[debug] [2017-09-30T04:59:41.820Z] Node Version:  v8.1.2
+[debug] [2017-09-30T04:59:41.820Z] Time:          Sat Sep 30 2017 00:59:41 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T04:59:41.820Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T04:59:41.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T04:59:41.835Z] > authorizing via signed-in user
+[debug] [2017-09-30T04:59:41.837Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 00:59:41 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T04:59:45.788Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T04:59:45.790Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 00:59:45 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T04:59:46.180Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T04:59:46.188Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 00:59:46 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T04:59:46.656Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T04:59:46.657Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 00:59:46 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T04:59:47.580Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:22:47.398Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:22:47.400Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:22:47.400Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:22:47.401Z] Platform:      win32
+[debug] [2017-09-30T05:22:47.401Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:22:47.401Z] Time:          Sat Sep 30 2017 01:22:47 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:22:47.401Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:22:47.415Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:22:47.415Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:22:47.417Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:22:47 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:22:49.770Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:22:49.773Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:22:49 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:22:50.297Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:22:50.305Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:22:50 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:22:50.624Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:22:50.625Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:22:50 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:22:50.947Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:23:42.910Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:23:42.912Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:23:42.912Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:23:42.912Z] Platform:      win32
+[debug] [2017-09-30T05:23:42.912Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:23:42.913Z] Time:          Sat Sep 30 2017 01:23:42 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:23:42.913Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:23:42.926Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:23:42.926Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:23:42.929Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:23:42 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:23:43.344Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:23:43.346Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:23:43 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:23:43.867Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:23:43.877Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:23:43 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:23:44.111Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:23:44.112Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:23:44 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:23:44.657Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:24:25.978Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:24:25.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:24:25.981Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:24:25.981Z] Platform:      win32
+[debug] [2017-09-30T05:24:25.981Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:24:25.981Z] Time:          Sat Sep 30 2017 01:24:25 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:24:25.981Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:24:25.996Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:24:25.996Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:24:25.999Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:24:25 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:24:26.500Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:24:26.503Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:24:26 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:24:27.070Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:24:27.078Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:24:27 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:24:27.734Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:24:27.735Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:24:27 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:24:28.435Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:26:06.541Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:26:06.543Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:26:06.544Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:26:06.544Z] Platform:      win32
+[debug] [2017-09-30T05:26:06.544Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:26:06.544Z] Time:          Sat Sep 30 2017 01:26:06 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:26:06.544Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:26:06.557Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:26:06.558Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:26:06.560Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:26:06 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:26:08.827Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:26:08.829Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:26:08 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:26:09.521Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:26:09.530Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:26:09 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:26:10.775Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:26:10.776Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:26:10 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:26:13.975Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:27:38.000Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:27:38.002Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:27:38.003Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:27:38.003Z] Platform:      win32
+[debug] [2017-09-30T05:27:38.003Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:27:38.003Z] Time:          Sat Sep 30 2017 01:27:38 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:27:38.003Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:27:38.017Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:27:38.018Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:27:38.020Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:27:38 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:27:38.676Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:27:38.678Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:27:38 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:27:39.269Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:27:39.277Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:27:39 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:27:39.909Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:27:39.910Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:27:39 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:27:40.280Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T05:44:37.042Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T05:44:37.045Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T05:44:37.045Z] CLI Version:   3.12.0
+[debug] [2017-09-30T05:44:37.045Z] Platform:      win32
+[debug] [2017-09-30T05:44:37.045Z] Node Version:  v8.1.2
+[debug] [2017-09-30T05:44:37.045Z] Time:          Sat Sep 30 2017 01:44:37 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:37.045Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T05:44:37.062Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T05:44:37.062Z] > authorizing via signed-in user
+[debug] [2017-09-30T05:44:37.064Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-09-30T05:44:37.065Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Nh1SLfhdoV5oIy4HAQhnSy6sfPXFcQLSZHDsWSqHNqk',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 30 2017 01:44:37 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:37.363Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:44:37.395Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:44:37 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:38.661Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:44:38.663Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 01:44:38 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:39.089Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T05:44:39.097Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 01:44:39 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:40.393Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T05:44:40.394Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 01:44:40 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T05:44:41.000Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...
+[debug] [2017-09-30T06:59:13.820Z] ----------------------------------------------------------------------
+[debug] [2017-09-30T06:59:13.823Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Romil\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-09-30T06:59:13.823Z] CLI Version:   3.12.0
+[debug] [2017-09-30T06:59:13.823Z] Platform:      win32
+[debug] [2017-09-30T06:59:13.823Z] Node Version:  v8.1.2
+[debug] [2017-09-30T06:59:13.823Z] Time:          Sat Sep 30 2017 02:59:13 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:13.823Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-30T06:59:13.845Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-30T06:59:13.845Z] > authorizing via signed-in user
+[debug] [2017-09-30T06:59:13.847Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-09-30T06:59:13.847Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/Nh1SLfhdoV5oIy4HAQhnSy6sfPXFcQLSZHDsWSqHNqk',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Sep 30 2017 02:59:13 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:14.171Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T06:59:14.211Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/note-link  
+ Sat Sep 30 2017 02:59:14 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:14.595Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T06:59:14.596Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/note-link/tokens  
+ Sat Sep 30 2017 02:59:14 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:15.138Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\notelink'...
+[info] 
+[debug] [2017-09-30T06:59:15.151Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/note-link  
+ Sat Sep 30 2017 02:59:15 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:15.328Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-30T06:59:15.329Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/796749553536/clients/_:getWebAppConfig  
+ Sat Sep 30 2017 02:59:15 GMT-0400 (US Eastern Daylight Time)
+[debug] [2017-09-30T06:59:15.556Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] Shutting down...

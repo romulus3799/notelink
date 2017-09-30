@@ -1,0 +1,13 @@
+angular.module('noteLink',
+	[
+		'ngRoute',
+		'ngMaterial',
+		'appRoutes',
+		'MainController',
+		'HomeController',
+		'PostController',
+		'ChannelsController',
+		'ProfileController',
+		'SongService'
+	]
+);
