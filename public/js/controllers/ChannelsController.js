@@ -11,8 +11,8 @@
 						$scope.tracks[i].name == '' || 
 						$scope.tracks[i].artist == '' ||
 						$scope.tracks[i].genres[0] === '' ||
-						$scope.tracks[i].genres.length === 0 ||
-						!$scope.tracks[i].link.includes('youtu')) {
+						$scope.tracks[i].genres.length === 0/* ||
+						!$scope.tracks[i].link.includes('youtu')*/) {
 						SongService.delete($scope.tracks[i]._id).then(tracks => {
 							$scope.tracks = tracks.data;
 						})
@@ -54,7 +54,10 @@
 		    		url = url.replace('/watch?v=', '/embed/');
 		    	} /*else if (url.includes('spotify.com/track')) {
 		    		url = url.replace('open.spotify.com/track/', 'embed.spotify.com/')
-		    	}*/
+		    	}*/else if (url.includes('soundcloud')) {
+		    		url = url.substring(url.indexOf('src="')+5, url.indexOf('">'));
+		    		console.log(url);
+		    	}
 		        return $sce.trustAsResourceUrl(url);
 		    };
 		}])

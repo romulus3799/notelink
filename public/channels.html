@@ -32,7 +32,8 @@
 		                </md-card-header-text>
 		            </md-card-header>
 		            <!-- <img ng-src="{{ imagePath }}" class="md-card-image" alt="Washed Out"> -->
-		            <iframe ng-src="{{ track.link | trusted }}" height="50%" frameborder="0"></iframe>
+		            <iframe ng-if="track.link.includes('youtu')" ng-src="{{ track.link | trusted }}" height="50%" frameborder="0"></iframe>
+		            <iframe ng-if="track.link.includes('soundcloud')" width="100%" height="300" scrolling="no" frameborder="no" ng-src="{{ track.link | trusted }}"></iframe>
 		            <md-card-title>
 		                <md-card-title-text>
 		                    <span class="md-headline">{{ track.artist }} - {{ track.name }}</span>
