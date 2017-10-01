@@ -24,7 +24,7 @@
 				<md-card style="width: 700px;" ng-if="(searchGenres.length === 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 || match(searchTags, track.tags))">
 		            <md-card-header>
 		                <md-card-header-text>
-		                    <h2 class="md-title">{{ track.genres.toString().replace(",", ", ") }}</h2>
+		                    <h2 class="md-title"><b>Genre<span ng-if="track.genres.length != 1">s</span>:</b> {{ track.genres.toString().replace(",", ", ") }}</h2>
 		                </md-card-header-text>
 		            </md-card-header>
 		            <!-- <img ng-src="{{ imagePath }}" class="md-card-image" alt="Washed Out"> -->
@@ -56,8 +56,8 @@
 		            </iframe>
 		            <md-card-title>
 		                <md-card-title-text>
-		                    <span class="md-headline">{{ track.artist }} - {{ track.name }}</span>
-		                    <span class="md-subhead">{{ track.album }}</span>
+		                    <span class="md-headline"><b>{{ track.artist }} - </b>{{ track.name }}</span>
+		                    <span class="md-subhead"><b ng-if="track.album">Album:</b> {{ track.album }}</span>
 		                </md-card-title-text>
 		            </md-card-title>
 		            <md-card-actions layout="row" layout-align="start center">
@@ -69,7 +69,7 @@
 		                </md-card-icon-actions> -->
 		            </md-card-actions>
 		            <md-card-content>
-		            	<p>Tags: <b>{{ hashify(track.tags) || '--' }}</b></p>
+		            	<p>Tags: <b class="md-blue">{{ hashify(track.tags) || '--' }}</b></p>
 		            </md-card-content>
 		        </md-card>
     		</div>

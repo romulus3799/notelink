@@ -4,3 +4,12 @@
 iframe {
 	height: 25vw !important;
 }
+.md-blue {
+	color: #3F51B5;
+}
+.md-deep-purple {
+	color: #673AB7 !important;
+}
+.md-title {
+	margin-bottom: 70px;
+}
