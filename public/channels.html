@@ -21,19 +21,39 @@
 	<md-content layout-padding>
     	<div class='md-padding' layout="row" layout-wrap>
     		<div ng-repeat="track in tracks">
-				<md-card style="width: 40vw;" ng-if="(searchGenres.length === 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 || match(searchTags, track.tags))">
+				<md-card style="width: 700px;" ng-if="(searchGenres.length === 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 || match(searchTags, track.tags))">
 		            <md-card-header>
-		                <md-card-avatar>
-		                    <!-- <img class="md-user-avatar" src="img/100-2.jpeg"/> -->
-		                </md-card-avatar>
 		                <md-card-header-text>
-		                    <span class="md-title">User</span>
-		                    <span class="md-subhead">none</span>
+		                    <h2 class="md-title">{{ track.genres.toString().replace(",", ", ") }}</h2>
 		                </md-card-header-text>
 		            </md-card-header>
 		            <!-- <img ng-src="{{ imagePath }}" class="md-card-image" alt="Washed Out"> -->
-		            <iframe ng-if="track.link.includes('youtu')" ng-src="{{ track.link | trusted }}" height="50%" frameborder="0"></iframe>
-		            <iframe ng-if="track.link.includes('soundcloud')" width="100%" height="300" scrolling="no" frameborder="no" ng-src="{{ track.link | trusted }}"></iframe>
+		            <iframe 
+		            	ng-if="track.link.includes('youtu')" 
+		            	ng-src="{{ track.link | trusted }}" 
+		            	width="100%" 
+		            	height="50%" 
+		            	frameborder="0"
+		            	ng-click="play(track)">	
+	            	</iframe>
+		            <iframe 
+		            	ng-if="track.link.includes('soundcloud')" 
+		            	width="100%" 
+		            	height="300" 
+		            	scrolling="no" 
+		            	frameborder="no" 
+		            	ng-src="{{ track.link | trusted }}"
+		            	ng-click="play(track)">		
+	            	</iframe>
+		            <iframe 
+			            ng-if="track.link.includes('spotify')" 
+			            src="{{ track.link | trusted }}" 
+			            width="100%" 
+			            height="380" 
+			            frameborder="0" 
+			            allowtransparency="true"
+			            ng-click="play(track)">
+		            </iframe>
 		            <md-card-title>
 		                <md-card-title-text>
 		                    <span class="md-headline">{{ track.artist }} - {{ track.name }}</span>
@@ -41,12 +61,7 @@
 		                </md-card-title-text>
 		            </md-card-title>
 		            <md-card-actions layout="row" layout-align="start center">
-		                <md-button ng-class="{'md-warn': true }">
-		                	<md-icon class="material-icons">&#xE8DC;</md-icon>
-		                </md-button>
-		                <md-button ng-class="{'md-primary': true }">
-		                	<md-icon class="material-icons">&#xE8DB;</md-icon>
-		                </md-button>
+		                <span ng-if="track.explicit" style="color: red">EXPLICIT</span>
 		                <!-- <md-card-icon-actions>
 		                    <md-button class="md-icon-button" aria-label="toggle">
 		                        <md-icon md-svg-icon="md-toggle-arrow"></md-icon>

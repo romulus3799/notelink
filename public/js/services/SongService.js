@@ -10,5 +10,5 @@ angular.module('SongService', [])
 			delete: id => {
 				return $http.delete('/api/songs/' + id);
 			}
-		}
+		};
 	}]);

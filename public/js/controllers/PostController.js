@@ -3,10 +3,7 @@
 	angular.module('PostController', [])
 		.controller('PostController', ($scope, $http, SongService) => {
 
-			SongService.get().then(tracks => {
-				$scope.tracks = tracks.data;
-			})
-
+			$http.get('/api/songs').then(res => { console.log(res); }, err => { console.log(err); });
 			$scope.genres = GENRES;
 
 			$scope.track = {

@@ -20,7 +20,7 @@
 					console.log($scope.tracks[i]);
 				}
 			});
-
+			SongService.delete('59d02ca70319a04d5cec320d');
 
 			$scope.hashify = arr => {
 				return arr.toString().replace(/ /g, ', ');
@@ -52,9 +52,9 @@
 		    		url = url.replace('youtu.be', 'youtube.com/embed');
 		    	} else if (url.includes('youtube.com/watch?v=')) {
 		    		url = url.replace('/watch?v=', '/embed/');
-		    	} /*else if (url.includes('spotify.com/track')) {
-		    		url = url.replace('open.spotify.com/track/', 'embed.spotify.com/')
-		    	}*/else if (url.includes('soundcloud')) {
+		    	} else if (url.includes('spotify')) {
+		    		url = url.replace('open.spotify.com/track/', 'open.spotify.com/embed/track/')
+		    	}else if (url.includes('soundcloud')) {
 		    		url = url.substring(url.indexOf('src="')+5, url.indexOf('">'));
 		    		console.log(url);
 		    	}

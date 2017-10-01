@@ -2,9 +2,14 @@ const Song = require('./models/Song');
 const path = require('path');
 
 module.exports = app => {
+
 	app.get('/api/songs', (req,res) => {
 		Song.find((err, songs) => {
-			if (err) res.send(err);
+			if (err) {
+				console.log('error getting songs');
+				res.send(err);
+			}
+
 			res.json(songs);
 		});
 	});
