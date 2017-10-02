@@ -59,16 +59,16 @@
 				
 				<!-- TODO: require no special chars -->
 				<md-input-container class="md-block" flex-gt-xs>
-					<label>Tag(s)</label>
+					<label>Moods, Subgenres, Keywords</label>
 					<md-icon class="material-icons">&#xE893;</md-icon>
-					<input ng-model="track.tags" placeholder="#synthpop #newwave #80s">
+					<input ng-model="track.tags" placeholder="#synthpop #newwave #80s" required>
 				</md-input-container>
 					
 				<md-button 
 					class="md-primary" 
 					style="font-size: 24pt !important; padding: 15px;" 
 					type="submit" 
-					ng-disabled="track.link === '' || track.artist === '' || track.name === '' || track.genres === []"
+					ng-disabled="track.link === '' || track.artist === '' || track.name === '' || track.tags === '' || track.genres === []"
 					ng-click="postTrack()">Share</md-button>
 			</form>
 			<!-- <div style="width: 20vw"></div> -->

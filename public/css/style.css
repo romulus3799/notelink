@@ -7,7 +7,7 @@ iframe {
 .md-blue {
 	color: #3F51B5;
 }
-.md-deep-purple {
+md-input-container md-icon, .md-deep-purple {
 	color: #673AB7 !important;
 }
 .md-title {

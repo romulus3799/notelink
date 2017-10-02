@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<base href="/">
+	<title>Note Link</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="public/libs/angular-material/angular-material.min.css">
+	<link rel="stylesheet" href="public/css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- SPELLS -->
+	<script src="public/libs/angular/angular.js"></script>
+	<script src="public/libs/angular-material/angular-material.min.js"></script>
+	<script src="public/libs/angular-animate/angular-animate.min.js"></script>
+	<script src="public/libs/angular-aria/angular-aria.min.js"></script>
+	<script src="public/libs/angular-messages/angular-messages.min.js"></script>
+	<script src="public/libs/angular-route/angular-route.min.js"></script>
+	<script src="public/libs/jquery/dist/jquery.min.js"></script>
+	
+	<script src="public/js/data/genres.js"></script>
+	<script src="public/js/controllers/MainController.js"></script>
+	<script src="public/js/controllers/HomeController.js"></script>
+	<script src="public/js/controllers/PostController.js"></script>
+	<script src="public/js/controllers/ChannelsController.js"></script>
+	<script src="public/js/controllers/ProfileController.js"></script>
+	<script src="public/js/services/SongService.js"></script>
+	<script src="public/js/appRoutes.js"></script>
+	<script src="public/js/app.js"></script>
+
+</head>
+<body ng-app="noteLink" ng-controller="MainController" ng-cloak>
+	<md-content class="md-padding">
+	 	<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
+			<md-nav-item md-nav-href="/" name="home">
+				<span class="material-icons">&#xE88A;</span> Home
+			</md-nav-item>
+			<md-nav-item md-nav-href="/share" name="share">
+				 <span class="material-icons">&#xE147;</span> Share
+			</md-nav-item>
+			<md-nav-item md-nav-href="/discover" name="discover">
+				<span class="material-icons">&#xE030;</span> Discover
+			</md-nav-item>
+		</md-nav-bar>
+		<div ng-view></div>
+	</md-content>
+</body>
+</html>
