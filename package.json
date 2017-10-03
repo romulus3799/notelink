@@ -1,0 +1,26 @@
+{
+  "name": "notelink",
+  "version": "0.1.0",
+  "description": "A community of giving and receiving music.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --harmony server.js"
+  },
+  "dependencies": {
+    "heroku": "^0.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "engines": {
+    "node": ""
+  },
+  "repository": {
+    "type": "git",
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "groupme"
+  ],
+  "license": "MIT"
+}
