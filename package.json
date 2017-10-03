@@ -10,6 +10,8 @@
     "heroku": "^0.2.0",
     "express": "*",
     "mongoose": "*",
+    "method-override": "*",
+    "body-parser": "*",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   },
