@@ -4,6 +4,7 @@
 		.controller('ChannelsController', ($scope, $http, SongService) => {
 			$scope.tagsInput = '';
 			$scope.genres = GENRES;
+			console.log('Into ChannelsController');
 			SongService.get().then(tracks => {
 				$scope.tracks = tracks.data;
 				for (let i in $scope.tracks) {

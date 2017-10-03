@@ -6,13 +6,8 @@
     "public": ".",
     "ignore": [
       "firebase.json",
+      "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "public/index.html"
-      }
     ]
   }
 }

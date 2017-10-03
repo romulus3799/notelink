@@ -3,6 +3,7 @@
 	angular.module('PostController', [])
 		.controller('PostController', ($scope, $http, SongService) => {
 
+			console.log('Into PostController');
 			$http.get('/api/songs').then(res => { console.log(res); }, err => { console.log(err); });
 			$scope.genres = GENRES;
 

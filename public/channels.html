@@ -21,7 +21,7 @@
 	<md-content layout-padding>
     	<div class='md-padding' layout="row" layout-wrap>
     		<div ng-repeat="track in tracks">
-				<md-card style="width: 700px;" ng-if="(searchGenres.length === 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 || match(searchTags, track.tags))">
+				<md-card style="width: 700px;" ng-if="(searchGenres.length === 0 && searchTags.length !== 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 && searchGenres.length !== 0 || match(searchTags, track.tags))">
 		            <md-card-header>
 		                <md-card-header-text>
 		                    <h2 class="md-title"><b>Genre<span ng-if="track.genres.length != 1">s</span>:</b> {{ track.genres.toString().replace(",", ", ") }}</h2>
