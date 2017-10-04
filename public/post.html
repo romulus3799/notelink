@@ -1,4 +1,4 @@
-<div ng-controller="PostController">
+<div id="post-content" ng-controller="PostController">
 
 	<md-content layout-padding ng-if="!submitted">
 
@@ -14,7 +14,7 @@
 				<div layout-gt-xs="row">
 					<md-input-container class="md-block" flex-gt-xs>
 						<label>Artist/Band</label>
-						<md-icon class="material-icons">&#xE03F;</md-icon>
+						<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE03F;</md-icon>
 						<input ng-model="track.artist" placeholder="a-ha" maxlength="34" required>
 						<div ng-messages="projectForm.clientName.$error">
 			            	<div ng-message="required">Artist/band name is required.</div>
@@ -24,7 +24,7 @@
 
 					<md-input-container class="md-block" flex-gt-xs>
 						<label>Title</label>
-						<md-icon class="material-icons">&#xE3A1;</md-icon>
+						<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE3A1;</md-icon>
 						<input ng-model="track.name" placeholder="Take On Me" maxlength="34" required>
 						<div ng-messages="projectForm.clientName.$error">
 			            	<div ng-message="required">Track title is required.</div>
@@ -33,7 +33,7 @@
 
 					<md-input-container class="md-block" flex-gt-xs>
 						<label>Album (Optional)</label>
-						<md-icon class="material-icons">&#xE019;</md-icon>
+						<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE019;</md-icon>
 						<input ng-model="track.album" placeholder="Hunting High and Low" maxlength="34">
 					</md-input-container>
 
@@ -41,7 +41,7 @@
 				<!-- TODO: error handling: https://material.angularjs.org/1.1.4/demo/input#basic-usage -->
 				<md-input-container class="md-block" flex-gt-xs>
 					<label>Link</label>
-					<md-icon class="material-icons">&#xE157;</md-icon>
+					<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE157;</md-icon>
 					<input ng-model="track.link" placeholder="https://www.youtube.com/watch?v=djV11Xbc914" required>
 					<div ng-messages="projectForm.clientName.$error">
 		            	<div ng-message="required">Link to track is required.</div>
@@ -52,7 +52,7 @@
 
 					<md-input-container class="md-block" flex-gt-xs>
 						<label>Genre(s)</label>
-						<md-icon class="material-icons">&#xE152;</md-icon>
+						<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon>
 						<md-select ng-model="track.genres" required multiple>
 							<md-option ng-repeat="genre in genres" value="{{ genre }}">
 								{{ genre }}
@@ -73,15 +73,17 @@
 				<!-- TODO: require no special chars -->
 				<md-input-container class="md-block" flex-gt-xs>
 					<label>Moods, Subgenres, Keywords</label>
-					<md-icon class="material-icons">&#xE893;</md-icon>
+					<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE893;</md-icon>
 					<input ng-model="track.tags" placeholder="synthpop newwave 80s" required>
 					<div ng-messages="projectForm.clientName.$error">
 		            	<div ng-message="required">At least one keyword is required.</div>
 		        	</div>
 				</md-input-container>
-					
+				
 				<md-button 
-					class="md-primary" 
+					class="md-primary g-recaptcha" 
+					data-sitekey="6LfcFjMUAAAAAA6j4Bk1v9w2nhZIEzITZgmDEAe9"
+					data-callback="YourOnSubmitFn"
 					style="font-size: 24pt !important; padding: 15px;" 
 					type="submit" 
 					ng-disabled="track.link === '' || track.artist === '' || track.name === '' || track.tags === '' || track.genres === []"

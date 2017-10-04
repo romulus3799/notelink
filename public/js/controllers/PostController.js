@@ -29,6 +29,19 @@
 				if ($scope.track.tags instanceof String)
 					$scope.track.tags = $scope.track.tags.toLowerCase().split(" ") || [];
 				
+				let link = $scope.track.link;
+				let isValidLink = false;
+				for (let i in VALID_LINKS) {
+					if (new RegExp(VALID_LINKS[i]).test(link)) {
+						isValidLink = true;
+						break;
+					}
+				}
+				if (!isValidLink) {
+					$scope.submissionMessage = 'Oops, you submitted a link with the wrong format! Please read the instructions for copying and pasting valid links.';
+					return;
+				};
+
 				SongService.post($scope.track)
 					.then(tracks => {
 						$scope.submissionMessage = 'Your track has been shared!'; 

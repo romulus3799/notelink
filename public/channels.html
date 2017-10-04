@@ -1,9 +1,9 @@
-<div ng-controller="ChannelsController">
+<div id="channels-content" ng-controller="ChannelsController" style="background-color: #999;">
 	<md-content class="md-padding">
-		<p>Find music by genre or keyword:</p>
+		<h2>Disover music by genre or keyword:</h2>
 		<md-input-container class="md-block" flex-gt-xs>
 			<label>Genre(s)</label>
-			<md-icon class="material-icons">&#xE152;</md-icon>
+			<md-icon class="material-icons " md-colors="::{color: 'notelinktheme-primary-700'}">&#xE152;</md-icon>
 			<md-select ng-model="searchGenres" multiple>
 				<md-option ng-repeat="genre in genres" value="{{ genre }}">
 					{{ genre }}
@@ -13,18 +13,30 @@
 
 		<md-input-container class="md-block" flex-gt-xs>
 			<label>Keywords</label>
-			<md-icon class="material-icons">&#xE893;</md-icon>
+			<md-icon class="material-icons" md-colors="::{color: 'notelinktheme-primary-700'}">&#xE893;</md-icon>
 			<input ng-model="searchTagString" ng-change="searchTags = searchTagString.split(' ')" placeholder="synthpop newwave">
 		</md-input-container>
 	</md-content>
 
 	<md-content layout-padding>
-    	<div class='md-padding' layout="row" layout-wrap>
+    	<div class='md-padding' layout="row" layout-align="center top" layout-wrap>
     		<div ng-repeat="track in tracks">
-				<md-card style="width: 700px;" ng-if="(searchGenres.length === 0 && searchTags.length !== 0 || match(searchGenres,track.genres)) && (searchTags.length === 0 && searchGenres.length !== 0 || match(searchTags, track.tags))">
+				<md-card class="track-card" 
+					ng-if="searchTagString === PASSWORD || (
+					(searchTagString.length > 0 && searchGenres.length > 0) 
+						? match(searchGenres, track.genres) && match(searchTags, track.tags) :
+					(searchTagString.length === 0 && searchGenres.length > 0) 
+						? match(searchGenres, track.genres) :
+					(searchTagString.length > 0 && searchGenres.length === 0) 
+						? match(searchTags, track.tags) : false)">
 		            <md-card-header>
 		                <md-card-header-text>
-		                    <h2 class="md-title"><b>Genre<span ng-if="track.genres.length != 1">s</span>:</b> {{ track.genres.toString().replace(",", ", ") }}</h2>
+		                    <h2 class="md-title">
+		                    	<b md-colors="::{color: 'notelinktheme-primary-500'}">Genre<span ng-if="track.genres.length != 1">s</span>: </b>
+		                    	<span md-colors="::{color: 'notelinktheme-primary-700'}">
+			                    	{{ track.genres.toString().replace(",", ", ") }}
+			                	</span>
+			                </h2>
 		                </md-card-header-text>
 		            </md-card-header>
 		            <!-- <img ng-src="{{ imagePath }}" class="md-card-image" alt="Washed Out"> -->
@@ -56,20 +68,18 @@
 		            </iframe>
 		            <md-card-title>
 		                <md-card-title-text>
-		                    <span class="md-headline"><b>{{ track.artist }} - </b>{{ track.name }}</span>
-		                    <span class="md-subhead"><b ng-if="track.album">Album:</b> {{ track.album }}</span>
+		                    <span class="md-headline"><b md-colors="::{color: 'notelinktheme-warn-800'}">{{ track.artist }} - </b><span md-colors="::{color: 'notelinktheme-warn-400'}">{{ track.name }}</span></span>
+		                    <span class="md-subhead"><b ng-if="track.album" md-colors="::{color: 'notelinktheme-warn-300'}">Album:</b> <span md-colors="::{color: 'notelinktheme-warn-700'}">{{ track.album }}</span></span>
 		                </md-card-title-text>
 		            </md-card-title>
 		            <md-card-actions layout="row" layout-align="start center">
-		                <span ng-if="track.explicit" style="color: red">EXPLICIT</span>
-		                <!-- <md-card-icon-actions>
-		                    <md-button class="md-icon-button" aria-label="toggle">
-		                        <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
-		                    </md-button>
-		                </md-card-icon-actions> -->
+		                <span class="explicit" ng-if="track.explicit" md-colors="::{color: 'notelinktheme-warn-A400'}">EXPLICIT</span>
+		                <md-button class="md-warn" ng-if="searchTagString === PASSWORD" ng-click="delete(track._id)">
+		                	<md-icon class="material-icons">&#xE872;</md-icon>
+		                </md-button>
 		            </md-card-actions>
 		            <md-card-content>
-		            	<p>Keywords: <b class="md-blue">{{ hashify(track.tags) || '--' }}</b></p>
+		            	<p><span md-colors="::{color: 'notelinktheme-accent-400'}">Keywords: </span><b md-colors="::{color: 'notelinktheme-accent-800'}">{{ hashify(track.tags) || '--' }}</b></p>
 		            </md-card-content>
 		        </md-card>
     		</div>

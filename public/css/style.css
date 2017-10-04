@@ -4,12 +4,15 @@
 iframe {
 	height: 25vw !important;
 }
-.md-blue {
-	color: #3F51B5;
-}
-md-input-container md-icon, .md-deep-purple {
-	color: #673AB7 !important;
-}
 .md-title {
 	margin-bottom: 70px;
+}
+.explicit {
+	padding-left: 20px;
+}
+.track-card {
+	 width: 40vw;
+}
+md-content { 
+	height: initial;
 }

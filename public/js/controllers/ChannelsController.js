@@ -2,6 +2,7 @@
 	'use strict';
 	angular.module('ChannelsController', [])
 		.controller('ChannelsController', ($scope, $http, SongService) => {
+			$scope.PASSWORD = ADMIN_PASS;
 			$scope.tagsInput = '';
 			$scope.genres = GENRES;
 			console.log('Into ChannelsController');
@@ -21,7 +22,12 @@
 					console.log($scope.tracks[i]);
 				}
 			});
-			SongService.delete('59d02ca70319a04d5cec320d');
+			$scope.delete = id => {
+				SongService.delete(id).then(data => {
+					console.log('Deleted ' + id);
+					SongService.get().then(tracks => { $scope.tracks = tracks.data; });
+				});
+			}
 
 			$scope.hashify = arr => {
 				return arr.toString().replace(/ /g, ', ');
