@@ -12,7 +12,6 @@
 					if ($scope.tracks[i].link == '' || 
 						$scope.tracks[i].name == '' || 
 						$scope.tracks[i].artist == '' ||
-						$scope.tracks[i].genres[0] === '' ||
 						$scope.tracks[i].genres.length === 0/* ||
 						!$scope.tracks[i].link.includes('youtu')*/) {
 						SongService.delete($scope.tracks[i]._id).then(tracks => {
@@ -30,7 +29,7 @@
 			}
 
 			$scope.hashify = arr => {
-				return arr.toString().replace(/ /g, ', ');
+				return arr.toString().replace(/ /g, ', ').replace(/,,/g,',');
 			}
 
 			$scope.searchGenres = [];
@@ -51,6 +50,18 @@
         			return false;
 			    });
 			}; 
+
+			// $scope.pageWidth = $(window).width();
+			// $(window).resize(() => {
+			// 	$scope.pageWidth = $(window).width();
+			// 	console.log('page width: ' + $scope.pageWidth);
+			// })
+			// $(document).ready(() => {
+			// 	$(window).resize(() => {
+			// 		$scope.pageWidth = $(window).width();
+			// 		console.log('page width: ' + $scope.pageWidth);
+			// 	})
+			// })
 
 		})
 		.filter('trusted', ['$sce', $sce => {

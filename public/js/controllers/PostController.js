@@ -1,7 +1,13 @@
 (() => {
 	'use strict';
 	angular.module('PostController', [])
-		.controller('PostController', ($scope, $http, SongService) => {
+		.controller('PostController', ($scope, $http, $route, $location, SongService) => {
+			$scope.reloadRoute = () => {
+				$route.reload();
+			}
+			$scope.navigate = href => {
+				$location.path(href);
+			}
 
 			console.log('Into PostController');
 			$http.get('/api/songs').then(res => { console.log(res); }, err => { console.log(err); });
@@ -22,6 +28,7 @@
 
 			$scope.submitted = false;
 			$scope.submissionMessage = '';
+			$scope.showThanks = false;
 			$scope.postTrack = () => {
 				console.log($scope.track);
 				$scope.submitted = true;
@@ -45,6 +52,7 @@
 				SongService.post($scope.track)
 					.then(tracks => {
 						$scope.submissionMessage = 'Your track has been shared!'; 
+						$scope.showThanks = true;
 						console.log(tracks); 
 					},
 					error => { 

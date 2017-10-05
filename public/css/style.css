@@ -10,9 +10,22 @@ iframe {
 .explicit {
 	padding-left: 20px;
 }
-.track-card {
-	 width: 40vw;
+@media screen and (max-width: 900px) {
+  .track-card {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 901px) {
+  .track-card {
+    width: 40vw;
+  }
 }
 md-content { 
 	height: initial;
+}
+.btn-after-post, .btn-submit {
+	font-size: 24pt !important; padding: 15px;
+}
+i a {
+	color: #64DD17;
 }

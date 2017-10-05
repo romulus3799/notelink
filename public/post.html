@@ -81,19 +81,27 @@
 				</md-input-container>
 				
 				<md-button 
-					class="md-primary g-recaptcha" 
+					class="md-primary btn-submit g-recaptcha" 
 					data-sitekey="6LfcFjMUAAAAAA6j4Bk1v9w2nhZIEzITZgmDEAe9"
-					data-callback="YourOnSubmitFn"
-					style="font-size: 24pt !important; padding: 15px;" 
+					data-callback=""
 					type="submit" 
 					ng-disabled="track.link === '' || track.artist === '' || track.name === '' || track.tags === '' || track.genres === []"
 					ng-click="postTrack()">Share</md-button>
 			</form>
 			<!-- <div style="width: 20vw"></div> -->
 		</div>
-	</md-content>
 
-	<md-content layout-padding ng-if="submitted">
-		<h1>{{ submissionMessage }}</h1>
+		<div layout-padding ng-if="submitted" layout-align="center center">
+			<h1>{{ submissionMessage }}</h1>
+			<h3 ng-if="showThanks">Thanks so much for contributing to the notelink community! Submit another?</h3>
+			<div layout-align="center center">
+				<md-button class="md-accent btn-after-post" ng-click="reloadRoute()">
+					 <span class="material-icons">&#xE147;</span> Share
+				</md-button>
+				<md-button class="md-accent btn-after-post" ng-click="navigate('/discover')">
+					<span class="material-icons">&#xE030;</span> Discover
+				</md-button>
+			</div>
+		</div>
 	</md-content>
 </div>
