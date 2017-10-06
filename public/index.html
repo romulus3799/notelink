@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<base href="/">
+	<link rel="icon" type="image/png" href="img/logo2.png"/>
 	<title>Notelink</title>
 
 	<!-- SCROLLS -->
@@ -37,14 +38,7 @@
 </head>
 <body ng-app="noteLink" ng-controller="MainController" ng-cloak>
 	<md-content class="md-padding">
-	 	<md-nav-bar md-selected-nav-item="$location.path() === '/' 
-					? 'home' : 
-					$location.path() === '/share'
-					? 'share' :
-					$location.path() === '/discover'
-					? 'discover' :
-					$location.path() === '/profile'
-					? 'profile' : 'home'" nav-bar-aria-label="Pages">
+	 	<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="Pages">
 			<md-nav-item md-nav-href="/" name="home">
 				<span class="material-icons">&#xE88A;</span> Home
 			</md-nav-item>

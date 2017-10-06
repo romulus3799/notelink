@@ -5,7 +5,7 @@
 			$scope.PASSWORD = ADMIN_PASS;
 			$scope.tagsInput = '';
 			$scope.genres = GENRES;
-			console.log('Into ChannelsController');
+			// console.log('Into ChannelsController');
 			SongService.get().then(tracks => {
 				$scope.tracks = tracks.data;
 				for (let i in $scope.tracks) {
@@ -18,12 +18,12 @@
 							$scope.tracks = tracks.data;
 						})
 					}
-					console.log($scope.tracks[i]);
+					// console.log($scope.tracks[i]);
 				}
 			});
 			$scope.delete = id => {
 				SongService.delete(id).then(data => {
-					console.log('Deleted ' + id);
+					// console.log('Deleted ' + id);
 					SongService.get().then(tracks => { $scope.tracks = tracks.data; });
 				});
 			}
@@ -54,12 +54,12 @@
 			// $scope.pageWidth = $(window).width();
 			// $(window).resize(() => {
 			// 	$scope.pageWidth = $(window).width();
-			// 	console.log('page width: ' + $scope.pageWidth);
+			// 	// console.log('page width: ' + $scope.pageWidth);
 			// })
 			// $(document).ready(() => {
 			// 	$(window).resize(() => {
 			// 		$scope.pageWidth = $(window).width();
-			// 		console.log('page width: ' + $scope.pageWidth);
+			// 		// console.log('page width: ' + $scope.pageWidth);
 			// 	})
 			// })
 
@@ -74,7 +74,7 @@
 		    		url = url.replace('open.spotify.com/track/', 'open.spotify.com/embed/track/')
 		    	}else if (url.includes('soundcloud')) {
 		    		url = url.substring(url.indexOf('src="')+5, url.indexOf('">'));
-		    		console.log(url);
+		    		// console.log(url);
 		    	}
 		        return $sce.trustAsResourceUrl(url);
 		    };

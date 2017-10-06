@@ -9,8 +9,12 @@
 				$location.path(href);
 			}
 
-			console.log('Into PostController');
-			$http.get('/api/songs').then(res => { console.log(res); }, err => { console.log(err); });
+			// console.log('Into PostController');
+			$http.get('/api/songs').then(res => { 
+				// console.log(res); 
+			}, err => { 
+				// console.log(err); 
+			});
 			$scope.genres = GENRES;
 
 			$scope.track = {
@@ -30,7 +34,7 @@
 			$scope.submissionMessage = '';
 			$scope.showThanks = false;
 			$scope.postTrack = () => {
-				console.log($scope.track);
+				// console.log($scope.track);
 				$scope.submitted = true;
 				$scope.track.upload_date = Date.now();
 				if ($scope.track.tags instanceof String)
@@ -53,11 +57,11 @@
 					.then(tracks => {
 						$scope.submissionMessage = 'Your track has been shared!'; 
 						$scope.showThanks = true;
-						console.log(tracks); 
+						// console.log(tracks); 
 					},
 					error => { 
 						$scope.submissionMessage = 'There was an error sharing your track.';
-						console.log(error); 
+						// console.log(error); 
 					});
 			}
 

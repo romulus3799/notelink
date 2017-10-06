@@ -9,22 +9,9 @@ angular.module('MainController', [])
 		$location.path() === '/profile'
 		? 'profile' : 'discover';
 
-		$(document).ready(() => {
-
-			$('a').on('click', () => {
-				console.log($(this));
-				
-				$(document).ready(() => {
-					$scope.currentNavItem = $location.path() === '/' 
-					? 'home' : 
-					$location.path() === '/share'
-					? 'share' :
-					$location.path() === '/discover'
-					? 'discover' :
-					$location.path() === '/profile'
-					? 'profile' : 'home';
-				});
-			});
+		$scope.$on('$locationChangeStart', event => {
+			$scope.currentNavItem = 
+				$location.path() === '/' ? 'home' : $location.path().substr(1);
 		});
 	});
 

@@ -29,3 +29,13 @@ md-content {
 i a {
 	color: #64DD17;
 }
+.header img {
+  float: left;
+  height: 60px;
+}
+
+.header h1 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
