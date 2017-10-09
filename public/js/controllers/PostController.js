@@ -2,6 +2,10 @@
 	'use strict';
 	angular.module('PostController', [])
 		.controller('PostController', ($scope, $http, $route, $location, SongService) => {
+			$(document).ready(() => {
+				$('#afterSubmitDiv').hide();
+			})
+
 			$scope.reloadRoute = () => {
 				$route.reload();
 			}
@@ -9,12 +13,7 @@
 				$location.path(href);
 			}
 
-			// console.log('Into PostController');
-			$http.get('/api/songs').then(res => { 
-				// console.log(res); 
-			}, err => { 
-				// console.log(err); 
-			});
+			SongService.get().then(tracks => { $scope.tracks = tracks.data;});
 			$scope.genres = GENRES;
 
 			$scope.track = {
@@ -33,9 +32,11 @@
 			$scope.submitted = false;
 			$scope.submissionMessage = '';
 			$scope.showThanks = false;
+
 			$scope.postTrack = () => {
-				// console.log($scope.track);
+				console.log($scope.track);
 				$scope.submitted = true;
+				$('#afterSubmitDiv').show();
 				$scope.track.upload_date = Date.now();
 				if ($scope.track.tags instanceof String)
 					$scope.track.tags = $scope.track.tags.toLowerCase().split(" ") || [];
@@ -53,15 +54,28 @@
 					return;
 				};
 
+				// let isDuplicateLink = false;
+				// for (let i in $scope.tracks) {
+				// 	if ($scope.tracks[i].link === link) {
+				// 		isDuplicateLink = true;
+				// 		break;
+				// 	}
+				// }
+				// if (isDuplicateLink) {
+				// 	$scope.submissionMessage = 'That link has already been submitted.';
+				// 	return;
+				// };
+
 				SongService.post($scope.track)
 					.then(tracks => {
-						$scope.submissionMessage = 'Your track has been shared!'; 
+						$scope.submissionMessage = 'Your track has been shared!';
 						$scope.showThanks = true;
-						// console.log(tracks); 
+						console.log(tracks);
 					},
-					error => { 
+					error => {
 						$scope.submissionMessage = 'There was an error sharing your track.';
-						// console.log(error); 
+						$scope.showThanks = false;
+						console.log(error);
 					});
 			}
 
