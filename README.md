@@ -1,4 +1,4 @@
-![](https://i.imgur.com/bR4Md3s.png)
+<img src="https://i.imgur.com/bR4Md3s.png" width="48px">
 # notelink
 A website for music fans to share songs they love and find new songs.
 
